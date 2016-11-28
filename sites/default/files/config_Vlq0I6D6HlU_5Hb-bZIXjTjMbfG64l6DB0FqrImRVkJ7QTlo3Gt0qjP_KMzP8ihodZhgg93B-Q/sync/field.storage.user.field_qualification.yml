@@ -1,0 +1,30 @@
+uuid: 090691a9-5607-4cf4-80c0-186e9a3ee27d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_qualification
+field_name: field_qualification
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ug
+      label: U.G
+    -
+      value: pg
+      label: P.G
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
