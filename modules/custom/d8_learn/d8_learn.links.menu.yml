@@ -1,0 +1,5 @@
+d8_learn_controller_d8_learn_first_test:
+  title: 'Test 123'
+  parent: system.admin_config_development
+  route_name: d8_learn.d8_learn_controller_d8_learn_first
+  weight: 100
