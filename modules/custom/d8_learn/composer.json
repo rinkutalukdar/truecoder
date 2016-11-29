@@ -1,0 +1,14 @@
+{
+  "name": "drupal/d8_learn",
+  "type": "drupal-module",
+  "description": "Learn Drupal 8",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/d8_learn",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/d8_learn",
+    "source": "http://cgit.drupalcode.org/d8_learn"
+  },
+  "require": { }
+}

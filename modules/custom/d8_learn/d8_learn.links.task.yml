@@ -1,0 +1,8 @@
+d8_learn.admin: # The first plugin ID
+  title: 'First'
+  route_name: d8_learn.d8_learn_controller_d8_learn_first
+  base_route: d8_learn.admin
+d8_learn.admin_3rd_party: # The second plugin ID
+  title: 'Second'
+  route_name: d8_learn.d8_learn_controller_d8_learn_hi
+  base_route: d8_learn.admin

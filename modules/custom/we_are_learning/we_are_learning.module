@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains we_are_learning.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function we_are_learning_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the we_are_learning module.
+    case 'help.page.we_are_learning':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Try to make some awesome.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

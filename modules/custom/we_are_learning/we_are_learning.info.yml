@@ -1,0 +1,7 @@
+name: we_are_learning
+type: module
+description: Try to make some awesome.
+core: 8.x
+package: custom
+dependencies:
+  - node

@@ -1,0 +1,5 @@
+name: d8_learn
+type: module
+description: Learn Drupal 8
+core: 8.x
+package: Custom

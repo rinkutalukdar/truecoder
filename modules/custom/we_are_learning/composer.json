@@ -1,0 +1,14 @@
+{
+  "name": "drupal/we_are_learning",
+  "type": "drupal-module",
+  "description": "Try to make some awesome.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/we_are_learning",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/we_are_learning",
+    "source": "http://cgit.drupalcode.org/we_are_learning"
+  },
+  "require": { }
+}
