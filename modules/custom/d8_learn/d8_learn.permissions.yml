@@ -1,0 +1,6 @@
+d8 learn content:
+  title: 'D8 learning Content'
+  description: 'D8 learning Content'
+
+permission_callbacks:
+  - \Drupal\d8_learn\Controller\D8LearnPermissionController::d8LearnPermissions
