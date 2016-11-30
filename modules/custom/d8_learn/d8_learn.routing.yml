@@ -50,3 +50,12 @@ d8_learn.d8_learn_controller_d8_learn_form:
     _title: 'D8 Learn Controller Title'
   requirements:
     _permission: 'access content'
+
+d8_learn.d8_learn_controller_d8_learn_default_form:
+  path: '/d8_learn/config-form-example'
+  defaults:
+    _form: 'Drupal\d8_learn\Form\SimpleConfigForm'
+    #_controller: '\Drupal\d8_learn\Controller\D8LearnControllerHi::d8_learn_default_form'
+    _title: 'D8 Learn Config Form'
+  requirements:
+    _permission: 'access content'
