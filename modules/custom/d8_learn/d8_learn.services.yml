@@ -1,0 +1,6 @@
+services:
+  d8_learn.query_siteid_check:
+    class: Drupal\d8_learn\QueryAccessCheck
+    #arguments: ['@entity.manager']
+    tags:
+      - { name: access_check, applies_to: _query_siteid_check }

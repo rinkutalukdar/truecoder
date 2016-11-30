@@ -19,14 +19,13 @@ class D8LearnControllerThird extends ControllerBase {
    *   Return Hello string.
    */
   public function d8_learn_third(NodeInterface $node) {
-    //return "li";
-    //print_r($entity_id);
-    //$resonse = 
-    return new JsonResponse($node->getTitle());
-    // return [
-    //   //'#theme' => 'item_list',
-    //   '#markup' => '<pre>' . print_r($resonse, 1) . '</pre>',
-    // ];
+
+    // For json
+    // return new JsonResponse($node->getTitle());
+    return [
+      //'#theme' => 'item_list',
+      '#markup' => '<b>' . print_r($node->getTitle(), 1) . '</b>',
+    ];
   }
 
 }
