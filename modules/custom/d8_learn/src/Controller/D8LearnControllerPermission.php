@@ -7,6 +7,7 @@ use Drupal\node\NodeInterface;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\core\Access\AccessResult;
 
 /**
  * Class D8LearnController.
@@ -59,7 +60,8 @@ class D8LearnControllerPermission extends ControllerBase {
     );
   }
 
-  public function d8_learn_access(Request $request) {
+  public function d8_learn_access() {
+    $request = \Drupal::request();
     $qs = $request->getQueryString();
     //print_r($qs);die();
     if ($qs) {

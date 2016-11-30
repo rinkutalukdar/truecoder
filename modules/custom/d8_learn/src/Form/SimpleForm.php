@@ -40,6 +40,16 @@ class SimpleForm extends FormBase{
       '#title' => t('Enter Desctiption'),
       '#type' => 'textarea',
     );
+    $form['enter_echo_text_option'] = array(
+      '#title' => t('Enter Options'),
+      '#type' => 'select',
+      '#options' => ['Inida', 'US'],
+      '#ajax' => [
+        //'callback' => '::countryCallback',
+        'callback' => 'this, countryCallback',
+        'wrapper' => 'country-wrapper'
+      ]
+    );
     $form['enter_echo_submit'] = array(
       '#title' => t('Submit'),
       '#value' => t('Submit'),
@@ -47,7 +57,11 @@ class SimpleForm extends FormBase{
     );
     return $form;
   }
-
+  
+  public function countryCallback(array &$form, FormStateInterface $form_state) {
+    $country = $form_state->getValue();
+    return $form;
+  }
   /**
   * @inheritdoc
   */

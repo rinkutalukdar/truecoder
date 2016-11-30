@@ -15,7 +15,7 @@ d8_learn.d8_learn_controller_d8_learn_permission:
     _title: 'D8 Learn Controller'
   requirements:
     #_permission: 'access content'
-    custom_access: '\Drupal\d8_learn\Controller\D8LearnControllerPermission::d8_learn_access'
+    _custom_access: '\Drupal\d8_learn\Controller\D8LearnControllerPermission::d8_learn_access'
     #_query_siteid_check: 'TRUE'
 
 d8_learn.d8_learn_controller_d8_learn_hi:
