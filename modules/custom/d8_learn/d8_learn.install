@@ -1,0 +1,22 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function d8_learn_schema() {
+  $schema['d8_learn'] = array(
+    'description' => 'Maintain Echo Message',
+    'fields' => array(
+      'echo_text' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'description' => 'The entity_type of the entity to which this comment is a reply.',
+      ),  
+      'echo_desc' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'description' => 'The entity_type of the entity to which this comment is a reply.',
+      ), 
+    ),
+  );
+  return $schema;
+}

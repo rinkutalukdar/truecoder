@@ -4,3 +4,6 @@ services:
     #arguments: ['@entity.manager']
     tags:
       - { name: access_check, applies_to: _query_siteid_check }
+  d8_learn.form_manager:
+    class: Drupal\d8_learn\FormManager
+    arguments: ['@database']

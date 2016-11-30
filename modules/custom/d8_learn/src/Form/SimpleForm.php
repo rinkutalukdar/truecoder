@@ -9,9 +9,14 @@ use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\d8_learn\FormManager;
 
 class SimpleForm extends FormBase{
-  
+  protected $formManager;
+  public function __construct(FormManager $formManager) {
+    $this->formManager = $formManager;
+  }
+
   /**
   * @inheritdoc
   */
@@ -23,10 +28,13 @@ class SimpleForm extends FormBase{
   * @inheritdoc
   */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $this->formManager->fetchData();
+    dsm($this->formManager->fetchData());
     $form['enter_echo_text'] = array(
       '#title' => t('Enter Text'),
       '#type' => 'textfield',
       '#maxlenghth' => 5,
+      '#default_value' => $this->formManager->fetchData(),
     );
     $form['enter_echo_text_description'] = array(
       '#title' => t('Enter Desctiption'),
@@ -44,8 +52,22 @@ class SimpleForm extends FormBase{
   * @inheritdoc
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $values = $form_state->getValues();
-    dsm($form_state->getValues());
+    $values = array(
+      'echo_text' => $form_state->getValue('enter_echo_text'),
+      'echo_desc' => $form_state->getValue('enter_echo_text'),
+    );
+
+    $this->formManager->saveData($values);
+    // $conn = $this->database;
+    // //Database::getConnection();
+    // $conn->insert('d8_learn')->fields(
+    //   array(
+    //     'echo_text' => $form_state->getValue('enter_echo_text'),
+    //     'echo_desc  ' => $form_state->getValue('enter_echo_text_description'),
+    //   )
+    // )->execute();
+    drupal_set_message("Saved.");
+    //dsm($form_state->getValues());
   }
 
   /**
@@ -60,7 +82,7 @@ class SimpleForm extends FormBase{
 
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('database')
+      $container->get('d8_learn.form_manager')
     );
   }
 
