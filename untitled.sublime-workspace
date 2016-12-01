@@ -1,0 +1,799 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "modules/custom/d8_learn/d8_learn.routing.yml",
+			"settings":
+			{
+				"buffer_size": 2084,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/assets/js/weather_widget.js",
+			"settings":
+			{
+				"buffer_size": 111,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/src/Plugin/Block/WeatherBlock.php",
+			"settings":
+			{
+				"buffer_size": 2681,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/d8_learn.services.yml",
+			"settings":
+			{
+				"buffer_size": 606,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/src/EventSubscriber/CustomEventManager.php",
+			"settings":
+			{
+				"buffer_size": 1135,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/composer.json",
+			"settings":
+			{
+				"buffer_size": 427,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 1494,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n * This file is part of the Symfony package.\n *\n * (c) Fabien Potencier <fabien@symfony.com>\n *\n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n */\n\nnamespace Symfony\\Component\\HttpKernel;\n\n/**\n * Contains all events thrown in the HttpKernel component.\n *\n * @author Bernhard Schussek <bschussek@gmail.com>\n */\nfinal class KernelEvents\n{\n    /**\n     * The REQUEST event occurs at the very beginning of request\n     * dispatching.\n     *\n     * This event allows you to create a response for a request before any\n     * other code in the framework is executed. The event listener method\n     * receives a Symfony\\Component\\HttpKernel\\Event\\GetResponseEvent\n     * instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const REQUEST = 'kernel.request';\n\n    /**\n     * The EXCEPTION event occurs when an uncaught exception appears.\n     *\n     * This event allows you to create a response for a thrown exception or\n     * to modify the thrown exception. The event listener method receives\n     * a Symfony\\Component\\HttpKernel\\Event\\GetResponseForExceptionEvent\n     * instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const EXCEPTION = 'kernel.exception';\n\n    /**\n     * The VIEW event occurs when the return value of a controller\n     * is not a Response instance.\n     *\n     * This event allows you to create a response for the return value of the\n     * controller. The event listener method receives a\n     * Symfony\\Component\\HttpKernel\\Event\\GetResponseForControllerResultEvent\n     * instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const VIEW = 'kernel.view';\n\n    /**\n     * The CONTROLLER event occurs once a controller was found for\n     * handling a request.\n     *\n     * This event allows you to change the controller that will handle the\n     * request. The event listener method receives a\n     * Symfony\\Component\\HttpKernel\\Event\\FilterControllerEvent instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const CONTROLLER = 'kernel.controller';\n\n    /**\n     * The RESPONSE event occurs once a response was created for\n     * replying to a request.\n     *\n     * This event allows you to modify or replace the response that will be\n     * replied. The event listener method receives a\n     * Symfony\\Component\\HttpKernel\\Event\\FilterResponseEvent instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const RESPONSE = 'kernel.response';\n\n    /**\n     * The TERMINATE event occurs once a response was sent.\n     *\n     * This event allows you to run expensive post-response jobs.\n     * The event listener method receives a\n     * Symfony\\Component\\HttpKernel\\Event\\PostResponseEvent instance.\n     *\n     * @Event\n     *\n     * @var string\n     */\n    const TERMINATE = 'kernel.terminate';\n\n    /**\n     * The FINISH_REQUEST event occurs when a response was generated for a request.\n     *\n     * This event allows you to reset the global and environmental state of\n     * the application, when it was changed during the request.\n     *\n     * @var string\n     */\n    const FINISH_REQUEST = 'kernel.finish_request';\n}\n",
+			"file": "vendor/symfony/http-kernel/KernelEvents.php",
+			"file_size": 3212,
+			"file_write_time": 131033436300000000,
+			"settings":
+			{
+				"buffer_size": 3212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/symfony/event-dispatcher/EventSubscriberInterface.php",
+			"settings":
+			{
+				"buffer_size": 1552,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/src/OpenWeatherForecast.php",
+			"settings":
+			{
+				"buffer_size": 1556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/custom/d8_learn/d8_learn.libraries.yml",
+			"settings":
+			{
+				"buffer_size": 827,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/di_demo/di_demo/initial",
+		"/var/www/di_demo/di_demo/initial/data",
+		"/var/www/di_demo/di_demo/initial/logs",
+		"/var/www/di_demo/di_demo/initial/src",
+		"/var/www/di_demo/di_demo/initial/src/DependencyInjectionDemo",
+		"/var/www/di_demo/di_demo/initial/src/DependencyInjectionDemo/Notifier",
+		"/var/www/di_demo/di_demo/initial/vendor",
+		"/var/www/di_demo/di_demo/initial/vendor/composer",
+		"/var/www/d8",
+		"/var/www/d8/core/modules",
+		"/var/www/d8/core/modules/block",
+		"/var/www/d8/core/modules/block/js",
+		"/var/www/d8/core/modules/node",
+		"/var/www/d8/core/modules/user/src/Plugin",
+		"/var/www/d8/core/modules/user/src/Plugin/Block",
+		"/var/www/d8/core/modules/user/templates",
+		"/var/www/d8/core/themes/bartik",
+		"/var/www/d8/core/themes/bartik/templates",
+		"/var/www/d8/core/themes/stark",
+		"/var/www/d8/modules/custom",
+		"/var/www/d8/modules/custom/d8_learn",
+		"/var/www/d8/modules/custom/d8_learn/src",
+		"/var/www/d8/modules/custom/d8_learn/src/EventSubscriber",
+		"/var/www/d8/modules/custom/d8_learn/src/Plugin/Block",
+		"/var/www/d8/modules/custom/d8_learn/templates",
+		"/var/www/d8/modules/custom/d8_learn/vendor",
+		"/var/www/d8/sites/default",
+		"/var/www/d8/vendor",
+		"/var/www/d8/vendor/antoineaugusti"
+	],
+	"file_history":
+	[
+		"/var/www/d8/modules/custom/d8_learn/assets/css/weather_widget.css",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.module",
+		"/var/www/d8/sites/default/services.yml",
+		"/var/www/d8/modules/custom/d8_training/d8_training.routing.yml",
+		"/var/www/d8/modules/custom/d8_learn/templates/weather-widget.html.twig",
+		"/var/www/d8/modules/custom/d8_learn/src/OpenWeatherForecast.php",
+		"/var/www/d8/core/modules/node/node.libraries.yml",
+		"/var/www/d8/core/modules/block/js/block.admin.js",
+		"/var/www/d8/core/modules/block/js/block.js",
+		"/var/www/d8/core/modules/book/book.libraries.yml",
+		"/var/www/d8/modules/custom/d8_learn/src/Form/SimpleConfigForm.php",
+		"/var/www/d8/modules/devel/webprofiler/src/Config/ConfigFactoryWrapper.php",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.services.yml",
+		"/var/www/d8/core/lib/Drupal/Component/Serialization/Json.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnPermissionController.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/NodelistingController.php",
+		"/var/www/d8/core/themes/bartik/templates/block--search-form-block.html.twig",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnControllerHi.php",
+		"/var/www/d8/core/modules/node/src/NodePermissions.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnController.php",
+		"/var/www/d8/modules/custom/d8_learn/src/QueryAccessCheck.php",
+		"/var/www/d8/modules/custom/d8_learn/src/FormManager.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Form/SimpleForm.php",
+		"/var/www/d8/core/lib/Drupal.php",
+		"/var/www/d8/core/lib/Drupal/Core/Block/BlockBase.php",
+		"/var/www/d8/core/lib/Drupal/Core/Plugin/ContainerFactoryPluginInterface.php",
+		"/var/www/d8/core/modules/user/src/Plugin/Block/UserLoginBlock.php",
+		"/var/www/d8/core/lib/Drupal/Core/Block/BlockPluginInterface.php",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.install",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnControllerPermission.php",
+		"/var/www/d8/core/lib/Drupal/Core/Form/ConfigFormBaseTrait.php",
+		"/var/www/d8/core/lib/Drupal/Core/Form/ConfigFormBase.php",
+		"/var/www/d8/core/lib/Drupal/Core/Form/FormBase.php",
+		"/var/www/d8/core/modules/block/src/BlockForm.php",
+		"/var/www/d8/core/lib/Drupal/Core/Entity/Controller/EntityViewController.php",
+		"/var/www/d8/core/lib/Drupal/Core/DependencyInjection/ContainerInjectionInterface.php",
+		"/var/www/d8/core/modules/comment/comment.install",
+		"/var/www/d8/sites/example.settings.local.php",
+		"/var/www/d8/sites/default/settings.php",
+		"/var/www/d8/core/modules/block/block.install",
+		"/var/www/d8/core/lib/Drupal/Core/Controller/ControllerBase.php",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.permissions.yml",
+		"/var/www/d8/core/modules/contact/src/ContactFormInterface.php",
+		"/var/www/d8/core/modules/system/tests/modules/ajax_forms_test/src/Plugin/Block/AjaxFormBlock.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnControllerThird.php",
+		"/var/www/d8/core/modules/node/node.services.yml",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.routing.yml",
+		"/var/www/d8/core/modules/node/node.permissions.yml",
+		"/var/www/d8/modules/custom/d8_learn/dr_learn.permissions.yml",
+		"/var/www/d8/core/modules/node/node.routing.yml",
+		"/var/www/d8/core/modules/node/node.module",
+		"/var/www/d8/core/modules/node/src/NodeTypeAccessControlHandler.php",
+		"/var/www/d8/core/modules/shortcut/shortcut.module",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.links.task.yml",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.links.action.yml",
+		"/var/www/d8/modules/custom/d8_learn/d8_learn.links.menu.yml",
+		"/var/www/d8/modules/custom/d8_training/src/Controller/NodeListingController.php",
+		"/var/www/d8/core/modules/block/src/Controller/CategoryAutocompleteController.php",
+		"/var/www/d8/modules/custom/d8_learn/src/Controller/D8LearnControllerSecond.php",
+		"/var/www/d8/modules/custom/d8_training/d8_training.info.yml",
+		"/var/www/di_demo/di_demo/initial/src/DependencyInjectionDemo/Notifier/Mailer.php",
+		"/var/www/di_demo/di_demo/initial/app.php",
+		"/var/www/di_demo/di_demo/initial/src/DependencyInjectionDemo/SubscriberManager.php",
+		"/var/www/di_demo/di_demo/initial/logs/emails.log",
+		"/home/tuser/Downloads/product",
+		"/home/tuser/Downloads/user",
+		"/var/www/d8/modules/custom/we_are_learning/src/Controller/WeAreLearningController.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/var/www/d8",
+			"/var/www/d8/modules/custom/d8_learn/src",
+			"/var/www/d8",
+			"/var/www/d8/modules",
+			"/var/www/d8",
+			"/var/www/d8/core/modules/node",
+			"/var/www/d8/core/modules",
+			"/var/www/d8",
+			"/var/www/di_demo/di_demo/initial/src/DependencyInjectionDemo"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"debug",
+			"openWeatherForecast",
+			"build",
+			"form",
+			"inheritdoc",
+			"FormManager.php",
+			"schema",
+			"ContainerInjectionInterface",
+			"Injecttion",
+			"ContainerInjecttion",
+			"ContainerInjecttionInterface",
+			"getFormId",
+			"form_state",
+			"FormBase",
+			"FormBaseClass",
+			"class AjaxForm",
+			"AjaxForm",
+			"Class Form",
+			"Form",
+			"Symphony\\Component\\Routing\\Route",
+			"Route",
+			"node_add_access",
+			"access",
+			"access callback",
+			"node_type_get_types",
+			"public",
+			"ContainerInterface",
+			"ConnectionInterface",
+			"JsonResponse",
+			"d8_learn_controller_d8_learn_first",
+			"NodeListingController",
+			"SubscriberManager.php"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "modules/custom/d8_learn/d8_learn.routing.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1279,
+								1279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "modules/custom/d8_learn/assets/js/weather_widget.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modules/custom/d8_learn/src/Plugin/Block/WeatherBlock.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1609,
+								1609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "modules/custom/d8_learn/d8_learn.services.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "modules/custom/d8_learn/src/EventSubscriber/CustomEventManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1102,
+								1102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "modules/custom/d8_learn/composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								427,
+								427
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "vendor/symfony/http-kernel/KernelEvents.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								424,
+								424
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "vendor/symfony/event-dispatcher/EventSubscriberInterface.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1504,
+								1504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "modules/custom/d8_learn/src/OpenWeatherForecast.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "modules/custom/d8_learn/d8_learn.libraries.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 52.0,
+		"last_filter": "KernelEvents",
+		"selected_items":
+		[
+			[
+				"KernelEvents",
+				"KernelEvents"
+			],
+			[
+				"EventSubscriberInterface",
+				"EventSubscriberInterface"
+			],
+			[
+				"Json",
+				"Json"
+			],
+			[
+				"Clent",
+				"Client"
+			],
+			[
+				"httpClient",
+				"httpClient"
+			],
+			[
+				"httpCl",
+				"httpClient"
+			],
+			[
+				"containerplugin",
+				"ContainerFactoryPluginInterface"
+			],
+			[
+				"plugin",
+				"PluginBase"
+			],
+			[
+				"ConfigFactoryWrapper",
+				"ConfigFactoryWrapper"
+			],
+			[
+				"BlockPluginInterface",
+				"BlockPluginInterface"
+			],
+			[
+				"BlockBas",
+				"BlockBase"
+			],
+			[
+				"ConfigFormBaseTrait",
+				"ConfigFormBaseTrait"
+			],
+			[
+				"ConfigFormBase",
+				"ConfigFormBase"
+			],
+			[
+				"ContainerInje",
+				"ContainerInjectionInterface"
+			],
+			[
+				"controllerbas",
+				"ControllerBase"
+			],
+			[
+				"containterInterface",
+				"ContainerFactoryPluginInterface"
+			],
+			[
+				"FormBase",
+				"FormBase"
+			]
+		],
+		"width": 735.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

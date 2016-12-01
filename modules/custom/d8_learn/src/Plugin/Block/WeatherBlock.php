@@ -42,16 +42,6 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface{
       '#type' => 'textfield',
       '#default_value' => $config['weather_city_name']
     );
-    // $form['show_detail_info'] = array(
-    //   '#title' => t('Show Detail'),
-    //   '#type' => 'checkbox',
-    //   '#default_value' => $config['show_detail_info']
-    // );
-    // $form['enter_echo_submit'] = array(
-    //   '#title' => t('Submit'),
-    //   '#value' => t('Submit'),
-    //   '#type' => 'submit',
-    // );
     return $form;
   }
 
@@ -66,8 +56,6 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface{
    //    'temp_min :' .  $data['main']['temp_min'],
    //    'temp_max: ' . $data['main']['temp_max'],
   	// );
-    //dsm($data['main']);
-    //$weather
     $build['#attached'] = array(
       'library' =>  array(
         'd8_learn/d8_learn'

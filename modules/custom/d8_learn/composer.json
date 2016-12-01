@@ -10,5 +10,7 @@
     "issues": "http://drupal.org/project/issues/d8_learn",
     "source": "http://cgit.drupalcode.org/d8_learn"
   },
-  "require": { }
+  "require": {
+    "antoineaugusti/google-books": "^0.2.1"
+  }
 }

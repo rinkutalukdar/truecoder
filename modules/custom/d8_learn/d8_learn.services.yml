@@ -10,3 +10,8 @@ services:
   d8_learn.open_weather_forecast:
     class: Drupal\d8_learn\OpenWeatherForecast
     arguments: ['@config.factory', '@http_client']
+  d8_learn.d8_event_manager:
+    class: Drupal\d8_learn\EventSubscriber\CustomEventManager
+    #arguments: ['@config.factory', '@http_client']
+    tags:
+      - { name: event_subscriber}
