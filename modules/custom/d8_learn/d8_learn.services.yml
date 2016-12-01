@@ -7,3 +7,6 @@ services:
   d8_learn.form_manager:
     class: Drupal\d8_learn\FormManager
     arguments: ['@database']
+  d8_learn.open_weather_forecast:
+    class: Drupal\d8_learn\OpenWeatherForecast
+    arguments: ['@config.factory', '@http_client']

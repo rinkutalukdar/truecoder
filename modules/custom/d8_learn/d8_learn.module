@@ -22,3 +22,23 @@ function d8_learn_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * implements hook_theme()
+ */
+function d8_learn_theme() {
+  return array(
+    // 'weather_widget' => array(
+    //   'variables' => array('forums' => NULL, 'topics' => NULL, 'parents' => NULL, 'tid' => NULL, 'sortby' => NULL, 'forum_per_page' => NULL),
+    // ),
+    // 'forum_list' => array(
+    //   'variables' => array('forums' => NULL, 'parents' => NULL, 'tid' => NULL),
+    // ),
+    // 'forum_icon' => array(
+    //   'variables' => array('new_posts' => NULL, 'num_posts' => 0, 'comment_mode' => 0, 'sticky' => 0),
+    // ),
+    'weather_widget' => array(
+      'variables' =>  array('weather_data' => NULL),
+    ),
+  );
+}
