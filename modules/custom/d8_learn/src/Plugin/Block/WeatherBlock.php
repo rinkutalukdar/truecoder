@@ -68,6 +68,11 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface{
   	// );
     //dsm($data['main']);
     //$weather
+    $build['#attached'] = array(
+      'library' =>  array(
+        'd8_learn/d8_learn'
+      ),
+    );
 	$build['weather_block_city'] = array(
 	  '#theme' => 'weather_widget',
 	  '#weather_data' => $data['main']
