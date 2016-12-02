@@ -1,0 +1,24 @@
+global-styling:
+  css:
+    theme:
+      assets/css/style.css: {media: print}
+  js:
+    assets/js/script.js: {attributes: {asyc}}
+libraries-overrride:
+  d8_training/weather_widget: core/jquery
+
+libraries-overrride:
+  d8_training/weather_widget:
+    css:
+      theme:
+        assets/css/weather-widget.css: assets/css/style.css
+
+libraries-extend:
+  d8_training/weather_widget:
+    css:
+      theme:
+        jhbkj
+        jnkj
+      js:
+        kjhkjh
+        kjkj
