@@ -27,7 +27,7 @@ d8_learn.d8_learn_controller_d8_learn_hi:
     _permission: 'access content'
 
 d8_learn.d8_learn_controller_d8_learn_second:
-  path: '/d8_learn/{entity_id}'
+  path: '/d8_learn/test/{entity_id}'
   defaults:
     _controller: '\Drupal\d8_learn\Controller\D8LearnControllerSecond::d8_learn_second'
     _title: 'D8 Learn Second'

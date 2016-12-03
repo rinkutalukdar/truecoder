@@ -4,7 +4,7 @@ namespace Drupal\d8_learn;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 // use Drupal\d8_learn\FormManager;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\webprofiler\Config\ConfigFactoryWrapper;
+//use Drupal\webprofiler\Config\ConfigFactoryWrapper;
 use GuzzleHttp\Client;
 use Drupal\Component\Serialization\Json;
 // use Drupal\Core\Form\ConfigFormBase;
@@ -15,7 +15,7 @@ class OpenWeatherForecast{
   protected $weatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
   protected $client;
 
-  public function __construct(ConfigFactoryWrapper $config,  Client $client) {
+  public function __construct(ConfigFactoryInterface $config,  Client $client) {
     $this->config = $config;
     $this->client = $client;
   }

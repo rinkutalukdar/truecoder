@@ -8,6 +8,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Session\AccountProxy;
+use Drupal\d8_learn\OpenWeatherForecast;
 
 /**
  * Provides a 'NodeList' block.
@@ -25,6 +26,7 @@ class NodeList extends BlockBase implements ContainerFactoryPluginInterface {
    * @var Drupal\Core\Database\Driver\mysql\Connection
    */
   protected $database;
+  protected $openweatherforecast;
   /**
    * Construct.
    *
@@ -40,11 +42,13 @@ class NodeList extends BlockBase implements ContainerFactoryPluginInterface {
         $plugin_id,
         $plugin_definition,
         Connection $database,
-        AccountProxy $accountproxy
+        AccountProxy $accountproxy,
+        OpenWeatherForecast $openWeatherForecast
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->database = $database;
     $this->accountproxy = $accountproxy;
+    $this->openweatherforecast = $openWeatherForecast;
   }
 
   /**
@@ -56,7 +60,8 @@ class NodeList extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_id,
       $plugin_definition,
       $container->get('database'),
-      $container->get('current_user')
+      $container->get('current_user'),
+      $container->get('d8_learn.open_weather_forecast')
     );
   }
 
@@ -98,7 +103,7 @@ class NodeList extends BlockBase implements ContainerFactoryPluginInterface {
            ->distinct('ndf.title')
            ->range(0, 5);
     $results = $sql->execute()->fetchAll();
-    
+
     $rows = array();
     $tags = array();
     foreach($results as $item){

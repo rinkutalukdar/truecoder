@@ -22,7 +22,7 @@ class NodeListingController extends ControllerBase {
   public function content() {
     $sql = $this->connection->select('node', n)
            ->field('n', array())
-           ->execute()
+           ->execute();
            //dsm($sql);
     return [
       '#theme' => 'item_list',
@@ -32,8 +32,8 @@ class NodeListingController extends ControllerBase {
 
   public function create(ContainerInterface $container) {
     return new static(
-      $container->get('database');
-      $container->get('logger.dblog');
+      $container->get('database'),
+      $container->get('logger.dblog')
     );
   }
 

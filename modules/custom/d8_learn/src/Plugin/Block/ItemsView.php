@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Driver\mysql\Connection;
-use Drupal\Core\Database\Driver\mysql\Connection;
+#use Drupal\Core\Database\Driver\mysql\Connection;
 
 /**
  * Provides a 'ItemsView' block.
@@ -24,7 +24,7 @@ class ItemsView extends BlockBase implements ContainerFactoryPluginInterface {
    *
    * @var Drupal\Core\Database\Driver\mysql\Connection
    */
-  protected $database_replica;
+  //protected $database_replica;
 
   /**
    * Drupal\Core\Database\Driver\mysql\Connection definition.
@@ -46,11 +46,10 @@ class ItemsView extends BlockBase implements ContainerFactoryPluginInterface {
         array $configuration,
         $plugin_id,
         $plugin_definition,
-        Connection $database_replica, 
-	Connection $database
+  Connection $database
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->database_replica = $database_replica;
+    //$this->database_replica = $database_replica;
     $this->database = $database;
   }
 
@@ -62,7 +61,6 @@ class ItemsView extends BlockBase implements ContainerFactoryPluginInterface {
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('database.replica'),
       $container->get('database')
     );
   }
@@ -98,16 +96,20 @@ class ItemsView extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     $build = [];
 
-    $sql = $this->database->select('node', n)
-           ->fields('n', array());
+    $sql = $this->database->select('node_field_data', 'nfd')
+       //->join('node_field_data', 'nfd', 'n.nid = nfd.nid')
+       ->condition('nfd.type','article','=')
+       ->fields('nfd', array())
+       ->distinct('ndf.title')
+       ->range(0, 5);
     $results = $sql->execute()->fetchAll();
-    
+
     $rows = array();
     foreach($results as $item){
-      $rows[] = $item->title;
+      $rows[] = $item->nid;
       //print '<pre>' . print_r($row, 1) . '</pre>';
       // $row = array(
-      //   'data' => array() 
+      //   'data' => array()
       // );
       // $row['data'][] = $item->nid;
       // $row['data'][] = $item->type;
